@@ -1,0 +1,41 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Documentation",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/catalogs": {
+            "get": {
+                "tags": [
+                    "Catalogs"
+                ],
+                "summary": "Retrieve all catalogs",
+                "operationId": "42de0014c181b2db4e8be53300e91171",
+                "responses": {
+                    "200": {
+                        "description": "List of all catalogs"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Catalogs",
+            "description": "Catalogs"
+        }
+    ]
+}
