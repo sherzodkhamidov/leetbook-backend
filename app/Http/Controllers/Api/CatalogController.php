@@ -4,24 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CatalogResource;
+use App\Http\Resources\CategoryResource;
 use App\Services\CatalogService;
 use Illuminate\Http\Request;
 
- /**
- * @OA\Get(
- *     path="/api/catalogs",
- *     summary="Retrieve all catalogs",
- *     tags={"Catalogs"},
- *     @OA\Response(
- *         response=200,
- *         description="List of all catalogs"
- *     ),
- *     @OA\Response(
- *         response=500,
- *         description="Internal server error"
- *     )
- * )
- */
 class CatalogController extends Controller
 {
     protected $catalogService;
@@ -32,11 +18,44 @@ class CatalogController extends Controller
     }
 
     /**
-     * @return \Illuminate\Http\JsonResponse
+     * @OA\Get(
+     *     path="/api/catalogs",
+     *     summary="Retrieve all catalogs",
+     *     tags={"Catalogs"},
+     *     @OA\Response(
+     *         response=200,
+     *         description="List of all catalogs"
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Internal server error"
+     *     )
+     * )
      */
     public function catalogs()
     {
         $catalogs = $this->catalogService->catalogs();
         return CatalogResource::collection($catalogs);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/categories",
+     *     summary="Retrieve all categories",
+     *     tags={"Categories"},
+     *     @OA\Response(
+     *         response=200,
+     *         description="List of all categories"
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Internal server error"
+     *     )
+     * )
+     */
+    public function categories()
+    {
+        $categories = $this->catalogService->categories();
+        return CategoryResource::collection($categories);
     }
 }

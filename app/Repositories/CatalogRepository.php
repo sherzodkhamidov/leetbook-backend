@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Catalog;
+use App\Models\Category;
 
 class CatalogRepository
 {
@@ -12,5 +13,9 @@ class CatalogRepository
     public function catalogs()
     {
         return Catalog::get();
+    }
+    public function categories()
+    {
+        return Category::get();
     }
 }

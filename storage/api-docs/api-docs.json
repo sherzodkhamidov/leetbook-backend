@@ -21,6 +21,23 @@
                     }
                 }
             }
+        },
+        "/api/categories": {
+            "get": {
+                "tags": [
+                    "categories"
+                ],
+                "summary": "Retrieve all categories",
+                "operationId": "14ac1e1b5090300ecf261902e78e0b58",
+                "responses": {
+                    "200": {
+                        "description": "List of all categories"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
         }
     },
     "components": {
@@ -36,6 +53,10 @@
         {
             "name": "Catalogs",
             "description": "Catalogs"
+        },
+        {
+            "name": "categories",
+            "description": "categories"
         }
     ]
 }

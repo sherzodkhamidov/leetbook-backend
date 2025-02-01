@@ -20,4 +20,9 @@ class CatalogService
     {
         return $this->catalogRepository->catalogs();
     }
+
+    public function categories()
+    {
+        return $this->catalogRepository->categories();
+    }
 }
