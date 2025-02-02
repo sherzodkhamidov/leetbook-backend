@@ -8,6 +8,7 @@ class CatalogService
 {
     protected $catalogRepository;
 
+
     public function __construct(CatalogRepository $catalogRepository)
     {
         $this->catalogRepository = $catalogRepository;
@@ -24,5 +25,10 @@ class CatalogService
     public function categories()
     {
         return $this->catalogRepository->categories();
+    }
+
+    public function subCategories()
+    {
+        return $this->catalogRepository->subCategories();
     }
 }

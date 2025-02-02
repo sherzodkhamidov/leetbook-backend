@@ -25,13 +25,30 @@
         "/api/categories": {
             "get": {
                 "tags": [
-                    "categories"
+                    "Categories"
                 ],
                 "summary": "Retrieve all categories",
                 "operationId": "14ac1e1b5090300ecf261902e78e0b58",
                 "responses": {
                     "200": {
                         "description": "List of all categories"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/api/sub-categories": {
+            "get": {
+                "tags": [
+                    "Sub-Categories"
+                ],
+                "summary": "Retrieve all sub-categories",
+                "operationId": "38e785daace0abd75e866ace7981d53a",
+                "responses": {
+                    "200": {
+                        "description": "List of all sub-categories"
                     },
                     "500": {
                         "description": "Internal server error"
@@ -55,8 +72,12 @@
             "description": "Catalogs"
         },
         {
-            "name": "categories",
-            "description": "categories"
+            "name": "Categories",
+            "description": "Categories"
+        },
+        {
+            "name": "Sub-Categories",
+            "description": "Sub-Categories"
         }
     ]
 }
