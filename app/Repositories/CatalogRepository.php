@@ -23,4 +23,8 @@ class CatalogRepository
     {
         return SubCategory::get();
     }
+    public function products()
+    {
+        return SubCategory::get();
+    }
 }

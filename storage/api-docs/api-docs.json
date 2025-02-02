@@ -55,6 +55,23 @@
                     }
                 }
             }
+        },
+        "/api/top-products": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Retrieve top products",
+                "operationId": "7e2a5eb2bd97381c691a0c1bce0d298f",
+                "responses": {
+                    "200": {
+                        "description": "List of all top products"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
         }
     },
     "components": {
@@ -78,6 +95,10 @@
         {
             "name": "Sub-Categories",
             "description": "Sub-Categories"
+        },
+        {
+            "name": "Products",
+            "description": "Products"
         }
     ]
 }

@@ -31,4 +31,9 @@ class CatalogService
     {
         return $this->catalogRepository->subCategories();
     }
+
+    public function products()
+    {
+        return $this->catalogRepository->products();
+    }
 }
